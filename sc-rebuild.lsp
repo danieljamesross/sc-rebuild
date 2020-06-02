@@ -32,7 +32,7 @@
   (format t "Initialising...")
   (uiop:run-program "brew upgrade sbcl" :output :string))
 
-(defun sc-rebuild  (sc-bin (&key cmn-bin clm-bin simulate)
+(defun sc-rebuild  (sc-bin &key cmn-bin clm-bin simulate)
   (brew-install-sbcl)
   (rm-fasl-files :sc-bin sc-bin
 		 :cmn-bin cmn-bin
